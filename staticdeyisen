@@ -1,0 +1,69 @@
+public class MyMath {
+    static int[] arraymin = {45, 69, 75, 24, 7, 36, 10, 15};
+    static int[] arraymax = {45, 69, 75, 24, 7, 36, 10, 15};
+
+    static int factorial(int num) {
+        int faktor = 1;
+        for (int i = 1; i <= num; i++) {
+            faktor *= i;
+
+
+        }
+        return faktor;
+    }
+
+    static int power(int num, int powernum) {
+        int deyer = 1;
+        for (int i = 1; i < powernum; i++) {
+            deyer *= num;
+
+        }
+        return deyer;
+    }
+    static boolean palindrome (int num ){
+        int palindrome = 12321;
+        int kopyalanmis= palindrome;
+        int ters=0;
+        int sonReqem;
+
+        while (kopyalanmis !=  0){
+            sonReqem = kopyalanmis % 10;
+            ters = ters * 10 + sonReqem;
+            kopyalanmis /= 10;
+        }
+        if (palindrome== ters ){
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+//bele olmazmis
+    
+//    static int[] minimum(int[] getArraymin) {
+//
+//        int arrayminimum = arraymin[0];
+//
+//        for (int i = 1; i < arraymin.length; i++) {
+//            if (arrayminimum < arraymin[i]) {
+//                arrayminimum = arraymin[0];
+//            }
+//
+//        }
+//        return arrayminimum;
+
+//bele olar
+//        static int minimum(int[] getArraymin){
+//            int arrayminimum = getArraymin[0];
+//            for (int i = 1; i < getArraymin.length; i++) {
+//                if (getArraymin[i] < arrayminimum) {
+//                    arrayminimum = getArraymin[i];
+//                }
+//            }
+//            return arrayminimum;
+//        }
+
+
+}
+
+
