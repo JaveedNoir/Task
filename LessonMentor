@@ -1,0 +1,40 @@
+package MentorLesson;
+
+public class Book {
+    int id;
+    String name;
+    String author;
+    int pageCount;
+    int count;
+    int price;
+
+    public void displayInfo(){
+        System.out.println("Kitab id "+id);
+        System.out.println("Kitab adi "+name);
+        System.out.println("Kitab yazari "+author);
+        System.out.println("Kitab Sehifelerinin sayi "+pageCount);
+        System.out.println("Kitab sayi "+count);
+        System.out.println("Kitab qiymeti "+price);
+    }
+
+    public boolean isExpensive(){
+        if (price <= 30){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public boolean isThickBook(){
+        if (pageCount > 200){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public int calculatePrice(){
+        int amount;
+        amount=count;
+
+        return amount * price;
+    }
+}
