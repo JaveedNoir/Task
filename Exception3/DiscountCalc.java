@@ -12,7 +12,7 @@ public class DiscountCalc {
         this.quantity = quantity;
     }
 
-    public double calculateDiscount(DiscountCalc discountCalc){ //1-throws IllegalArgumentException yaziriqsa methodun yaninda
+    public double calculateDiscount(DiscountCalc discountCalc){//1-throws IllegalArgumentException yaziriqsa methodun yaninda
                                                                // mainda try catch elemeliyik.eger Yazmiriqsa metod daxilinde
                                                               //catch edilir.Bes bunun ferqi nedir?
                                                               // 2-bunlar Runtime exception olur ama bizim kod xetamiz deyil
@@ -20,6 +20,10 @@ public class DiscountCalc {
                                                              //3-normal exceptiondan ferqi ne oldu ki bunun? nece ayirt etmek olar?
                                                              //4-eger bize gore xetadirsa throw new yazilir normalda java bunu xeta oluraq gormur
                                                               // ama biznes qaydalarina gore uygun deyil.Bu zaman runtim exception olur?
+                                                              //5-throw new nedir bes niye manual yazmaliyiq bunu ozumux tullamalylq bunu?
+                                                             //6-Parent classinda veya interface de bir metod yaradarsaq
+                                                             // bu metoda exception yoxlamasi edersek ve diger classlarda
+                                                            // bunu override etsek bu zaman butun classlarda bu yoxlama olacaq?
         try {
             if (discountCalc.userType.equals("VIP")) {
                 return this.discount = price * quantity * 0.2;
@@ -38,4 +42,5 @@ public class DiscountCalc {
             return this.discount = price * quantity * 0.1;
         }
     }
+
 }
