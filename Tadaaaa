@@ -1,0 +1,37 @@
+package TaskMask;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Task {
+    public static void main(String[] args) {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("Hello");
+        stringList.add("Salam");
+        stringList.add("Privet");
+        stringList.add("Hallowen");
+        stringList.add("Faraday");
+
+        stringList.stream()
+                .filter(string -> string.startsWith("H"))
+                .map(string -> string.toUpperCase())
+                .sorted()
+                .distinct()
+                .limit(3)
+                .skip(0)
+                .peek(string -> System.out.println("Bax: " + string))
+                .forEach(string -> System.out.println(string));
+
+        System.out.println(stringList.stream()
+                .filter(s -> s.startsWith("F"))
+                .count());
+
+        System.out.println(stringList.stream()
+                .filter(s -> s.startsWith("P"))
+                .anyMatch(s -> s.length() == 6));
+
+
+NOT: bezileri bir birinin eyni mentiqi idi deye etmedim anymatch kimi ve s,Digerlerini anlamadim sadece
+
+     
+}
